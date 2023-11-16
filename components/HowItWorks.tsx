@@ -36,13 +36,14 @@ const cards = [
 
 export default function HowItWorks() {
   return (
-    <section id="howitworks" className="grid place-content-center h-100">
+    <section
+      id="howitworks"
+      className="grid place-content-center h-100 m-10 p-10">
       <div className="w-1/2 grid place-content-center m-auto">
         <h1 className="text-[40px] font-bold m-auto py-5">How It Works</h1>
         <p className="m-auto">
           Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-          mattis, pulvinar dapibus leo.
+          consectetur adipiscing elit.
         </p>
       </div>
 
@@ -60,9 +61,9 @@ export default function HowItWorks() {
                 aria-hidden="true"
                 className="w-7 h-7 text-yellow-640">
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
               </svg>
             </span>

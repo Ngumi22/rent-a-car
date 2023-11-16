@@ -19,4 +19,11 @@
 body {
   margin: 0;
   background: white;
+
+}
+
+
+
+.carousel {
+  cursor: pointer;
 }

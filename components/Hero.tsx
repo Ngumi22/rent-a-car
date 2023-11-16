@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="md:flex text-black py-16 bg-white sm:block md:container md:mx-auto">
+      className="md:flex text-black m-10 p-10 bg-white sm:block md:container md:mx-auto">
       <div className="flex-1 px-16 py-1">
         <div className="py-0">
           <p className="text-[70px] p-0">Drive Your</p>
@@ -28,7 +28,7 @@ export default function Hero() {
 
         <div className="flex justify-start py-3 gap-10">
           <Link href="/appstore.com">
-            <button className="flex gap-2 px-12 py-3 text-sm font-medium text-white bg-violet-600 border border-violet-600 rounded active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring">
+            <button className="flex gap-2 px-12 py-3 text-sm font-medium text-white bg-btn-color border border-btn-color rounded active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring">
               Find A Car <FaArrowRightLong className="m-auto" />
             </button>
           </Link>

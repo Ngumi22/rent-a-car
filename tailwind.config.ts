@@ -9,9 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-pattern": "url('/bg.jpg')",
+        "hero-patterns": "url('/i8.jpg')",
+      },
+      colors: {
+        "regal-blue": "#15162C",
+        "btn-color": "#DCCDC0",
       },
     },
   },

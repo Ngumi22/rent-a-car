@@ -1,63 +1,56 @@
-import Image from "next/image";
-import { FaGasPump } from "react-icons/fa";
+import { FaRegStar, FaRegUser } from "react-icons/fa6";
+import { TbManualGearbox } from "react-icons/tb";
 import { MdOutlineAirlineSeatReclineExtra } from "react-icons/md";
 import { PiSteeringWheelFill } from "react-icons/pi";
 
 const CarCard = (props: any) => {
   return (
-    <div className="group bg-gray-50 p-2 sm:p-2 m-1 sm:m-1 hover:bg-white hover:border-[1px] cursor-pointer duration-50 border-blue-500">
-      <div className="flex justify-center">
-        <Image
+    <div className="group relative rounded-md shadow-lg">
+      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-48">
+        <img
           src={props.car?.image?.url}
           alt={props.car.name}
-          width={200}
-          height={300}
-          className="w-[250px] h-[180px] object-contain"
+          className="h-full w-full object-cover object-center lg:h-full lg:w-full"
         />
       </div>
-      <h2 className="text-[20px] font-medium mb-2">{props.car.name}</h2>
-      <h2 className="text-[28px] font-bold mb-2">
-        <span className="text-[10px] font-light">$ </span>
-        {props.car.price}
-        <span className="text-[12px] font-light">/day</span>
-      </h2>
+      <div className="p-2">
+        <h2 className="text-[20px] font-medium m-auto mb-2">
+          {props.car.name}
+        </h2>
+        <div className="flex justify-start gap-2">
+          <FaRegStar className="my-auto" />
+          <p>{props.car.name}</p>
+          <p>Reviews</p>
+        </div>
+        <div className="grid grid-cols-2 gap-4 place-content-around h-20">
+          <div className="flex gap-2">
+            <MdOutlineAirlineSeatReclineExtra className="my-auto" />
+            <p>5 Seat</p>
+          </div>
+          <div className="flex gap-2">
+            <TbManualGearbox className="my-auto" />
+            <p>{props.car?.carType}</p>
+          </div>
+          <div className="flex gap-2">
+            <PiSteeringWheelFill className="my-auto" />
+            <p>Self Drive</p>
+          </div>
+          <div className="flex gap-2">
+            <FaRegUser className="my-auto" />
+            <p>{props.car.carAvg} Cars</p>
+          </div>
+        </div>
+        <div className="flex justify-around mx-auto border-t-2 border-gray-500 py-4">
+          <p>Price</p>
+          <p className="font-bold">
+            Ksh {props.car.price}.00 / <span className="text-red-500">Day</span>
+          </p>
+        </div>
 
-      <div className="flex justify-around group-hover:hidden">
-        <div className="text-center text-gray-500">
-          <PiSteeringWheelFill className="w-full text-[22px] mb-2" />
-          <h2 className="line-clamp-5 text-[14px] font-light">
-            {props.car?.carType}
-          </h2>
-        </div>
-        <div className="text-center text-gray-500">
-          <MdOutlineAirlineSeatReclineExtra className="w-full text-[22px] mb-2" />
-          <h2 className="line-clamp-5 text-[14px] font-light">5 Seater</h2>
-        </div>
-        <div className="text-center text-gray-500">
-          <FaGasPump className="w-full text-[22px] mb-2" />
-          <h2 className="line-clamp-5 text-[14px] font-light">
-            {props.car.carAvg} KPH
-          </h2>
-        </div>
+        <button className="w-full bg-blue-700 rounded-md py-2 text-white">
+          Rent Now
+        </button>
       </div>
-      <button className="hidden group-hover:flex bg-gradient-to-r from-blue-400 to-blue-700  p-2 text-white w-full px-5 justify-between">
-        Rent Now
-        <span className="bg-blue-400 p-1 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-          </svg>
-        </span>
-      </button>
     </div>
   );
 };

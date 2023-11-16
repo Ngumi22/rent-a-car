@@ -6,10 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navigation = [
+  { name: "Home", href: "/", current: true },
   { name: "Rent A Car", href: "/rent-a-car", current: true },
   { name: "Rent Your Car", href: "/rent-your-car", current: false },
-  { name: "How it Works", href: "/how-it-works", current: false },
-  { name: "Why Choose Us", href: "/why-choose-us", current: false },
+  { name: "Become A Driver", href: "/driver", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -20,7 +20,7 @@ export default function Example() {
   return (
     <Disclosure
       as="nav"
-      className="bg-white border-b-[1px] border-black py-8 text-black">
+      className="bg-regal-blue border-b-[1px] border-black py-8 text-black">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
